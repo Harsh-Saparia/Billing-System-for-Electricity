@@ -1,0 +1,89 @@
+<div class="card">
+  <div class="card-header">
+    Bill Id : {{bill._id}}
+  </div>
+  <div class="card-body" id="bill_div">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Connection Id :</td>
+          <td>{{bill.connection_id}}</td>
+        </tr>
+        <tr>
+          <td>Billing Date :</td>
+          <td>{{bill.billing_date | date:'mediumDate'}}</td>
+        </tr>
+        <tr>
+          <td>Units Consumed :</td>
+          <td>{{units_consumed}}</td>
+        </tr>
+        <tr>
+          <td>Fixed charge :</td>
+          <td>{{bill.fixed_charge}}</td>
+        </tr>
+        <tr>
+          <td>Fuel charge :</td>
+          <td>{{bill.fuel_charge}}</td>
+        </tr>
+        <tr>
+          <td>Electricity Charge :</td>
+          <td>{{bill.electricity_charge}}</td>
+        </tr>
+        <tr>
+          <td>Current bill :</td>
+          <td>{{bill.current_bill}}</td>
+        </tr>
+        <tr>
+          <td>Previous due :</td>
+          <td>{{bill.previous_due}}</td>
+        </tr>
+        <tr>
+          <td>Total Bill :</td>
+          <td>{{bill.total_bill}}</td>
+        </tr>
+        <tr>
+          <td>Status :</td>
+          <td>{{bill.status}}</td>
+        </tr>
+        <tr *ngIf="isUnpaid()">
+          <td colspan="2">
+            <a class="btn btn-primary btn-lg btn-block" id="pay_bill" (click)="pay_bill_btn_clicked()">Pay Bill</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <a href={{bill.link}} target="_blank" class="btn btn-primary">Open link in new tab</a> -->
+
+  </div>
+  <div class="card-header" hidden="true" id="pay_header">
+    Payment
+  </div>
+  <div class="card-body" hidden="true" id="pay_body">
+    <form id="bill_payment_form">
+      <table class="table">
+        <tr>
+          <td>
+            <input type="text" id="card_number" name="card_number" placeholder="Enter Debit Card Number"/>
+          </td>
+          <td>
+            Amount : <input type="number" id="amount" name="amount" placeholder="amount" [(ngModel)]="pay_amount" disabled="true"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" id="cvv" name="cvv" placeholder="Enter CVV"/>
+          </td>
+          <td>
+            Expiry Date : <input type="date" id="expiry_date" name="expiry_date" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class="btn btn-success btn-lg btn-block" (click)="payBill()">Make Payment</a>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>

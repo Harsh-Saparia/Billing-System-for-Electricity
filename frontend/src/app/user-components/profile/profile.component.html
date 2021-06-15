@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    Profile
+  </div>
+
+  <div class="card-body">
+
+    <div class="form-group mb-4">
+      <label for="name">Name</label>
+      <input [(ngModel)]="user.name" type="text" class="form-control" name="email" required
+        placeholder="Name">
+    </div>
+    <hr/>
+
+    <div class="form-group mb-4">
+      <label for="email">Email</label>
+      <input [(ngModel)]="user.email" type="email" class="form-control" disabled="true" name="email" required
+        placeholder="Email address">
+    </div>
+    <hr/>
+
+    <div class="form-group mb-4">
+      <label for="mobile_no">Mobile no</label>
+      <input [(ngModel)]="user.mobile_no" type="text" class="form-control" name="mobile_no" required
+        placeholder="Mobile no">
+    </div>
+    <hr/>
+
+    <div class="form-group mb-4">
+      <label for="address">Address</label>
+      <input [(ngModel)]="user.address" type="text" class="form-control" name="address" required
+        placeholder="Address">
+    </div>
+
+    <label id="message"></label>
+    <input name="update" id="update" class="btn btn-primary btn-lg btn-block" type="submit" (click)="updateProfile()" value="Update">
+
+  </div>
+  </div>

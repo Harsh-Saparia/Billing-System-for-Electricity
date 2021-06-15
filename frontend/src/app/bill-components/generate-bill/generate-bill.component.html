@@ -1,0 +1,112 @@
+<br/>
+<div id="parent">
+  <div id="search_div">
+    <input type="text" id="connection_id" [(ngModel)]="connection_id" name="connection_id" />
+    <button id="search_btn" value="search" (click)="search_button_click()">Search</button><br>
+    <label id="error_message" style="color: red;"></label>
+    <label id="message" style="color: royalblue;"></label>
+  </div>
+  <label id="table_label"></label>
+</div>
+
+<table class="table" id="bill_table" hidden="true">
+  <tr>
+    <td>
+      Connection Id :
+    </td>
+    <td>
+      {{connection_id}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Connection Type :
+    </td>
+    <td>
+      {{connection.connection_type}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Owner Id :
+    </td>
+    <td>
+      {{connection.user_id}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Owner Name
+    </td>
+    <td>
+      {{user.name}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Address :
+    </td>
+    <td>
+      {{connection.address}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Current reading :
+    </td>
+    <td>
+      <input id="current_reading" name="current_reading" [(ngModel)]="bill.current_reading">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Last Reading :
+    </td>
+    <td>
+      {{connection.current_reading}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Dues :
+    </td>
+    <td>
+      {{connection.balance}}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      Charges
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Fixed charge :
+    </td>
+    <td>
+      {{charges.fixed_charge}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Fuel charge :
+    </td>
+    <td>
+      {{charges.fuel_charge}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Electricity charge :
+    </td>
+    <td>
+      {{charges.electricity_charge}}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button id="generate_bill" name="generate_bill" (click)="generate_bill_click()">Generate bill</button>
+    </td>
+  </tr>
+</table>
+

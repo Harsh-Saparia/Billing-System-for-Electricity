@@ -1,0 +1,49 @@
+<div class="py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <label id="message" class="mt-5 mb-3 text-success"></label>
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h3 class="mb-0">Connection Id : {{connection._id}}</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>Status : {{connection.status}}</label>
+          </div>
+          <div class="form-group">
+            <label>Connection type : {{connection.connection_type}}</label>
+          </div>
+          <div class="form-group">
+            <label>Request date : {{connection.request_date}}</label>
+          </div>
+          <div class="form-group">
+            <label>Address : {{connection.address}}</label>
+          </div>
+          <hr>
+          <div>
+            <label>Address proof : {{connection.address_proof_type}}</label>
+            <img src="http://localhost:3000/file/{{connection.address_proof}}" class="img-fluid" alt="Responsive image">
+          </div>
+          <hr>
+          <div>
+            <label>User id proof : {{connection.user_id_proof_type}}</label>
+            <img src="http://localhost:3000/file/{{connection.user_id_proof}}" class="img-fluid" alt="Responsive image">
+          </div>
+          <hr>
+          <div class="form-group">
+            <input type="checkbox" id="checkbox1" name="checkbox1" (change)="chackbox_selected($event)">
+            <label for="checkbox1">&nbsp;I have verified address and performed servey firmly</label><br>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-success" id="approve_button" (click)="approve_connection()" disabled="true">approve connection</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-secondary" id="deny_button" (click)="deny_connection()" disabled="true">Deny connection</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

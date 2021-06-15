@@ -1,0 +1,193 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand">Electrify</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div id="loggedInNav">
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="cursor:pointer" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" id="customer_nav">
+        <li class="nav-item" id="new_connection_nav">
+          <a class="nav-link" routerLink="/connections/new_connection">New Connection</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" id="admin_nav">
+        <li class="nav-item" id="denied_connections_nav">
+          <a class="nav-link" routerLink="/connections/denied_connections">denied Connections</a>
+        </li>
+        <li class="nav-item" id="running_connections_nav">
+          <a class="nav-link" routerLink="/connections/running_connections">running Connections</a>
+        </li>
+        <li class="nav-item" id="view_users_nav">
+          <a class="nav-link" routerLink="/users">Users</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" id="request_verifier_nav">
+        <li class="nav-item" id="view_requested_connection_nav">
+          <a class="nav-link" routerLink="/connections/new_requests">view Requested Connections</a>
+        </li>
+        <li class="nav-item" id="view_users_nav">
+          <a class="nav-link" routerLink="/users">Users</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" id="onfield_team_nav">
+        <li class="nav-item" id="onfield_requests_nav">
+          <a class="nav-link" routerLink="/connections/onfield_requests">onfield Requests</a>
+        </li>
+        <li class="nav-item" id="running_connections_nav">
+          <a class="nav-link" routerLink="/connections/running_connections">running Connections</a>
+        </li>
+        <li class="nav-item" id="pending_requests_nav">
+          <a class="nav-link" routerLink="/connections/pending_connections">Pending Connections</a>
+        </li>
+        <li class="nav-item" id="view_users_nav">
+          <a class="nav-link" routerLink="/users">Users</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+          <a class="nav-link" style="cursor:pointer" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+      </div> -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul id="loggedInNav" class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Home</a>
+          </li>
+          <li class="nav-item admin" id="denied_connections_nav">
+            <a class="nav-link" routerLink="/connections/denied_connections">denied Connections</a>
+          </li>
+          <li class="nav-item admin" id="running_connections_nav">
+            <a class="nav-link" routerLink="/connections/running_connections">running Connections</a>
+          </li>
+          <li class="nav-item admin" id="view_users_nav">
+            <a class="nav-link" routerLink="/users">Users</a>
+          </li>
+          <li class="nav-item admin" id="manage_charges_nav">
+            <a class="nav-link" routerLink="/manage_charges">Manage Charges</a>
+          </li>
+          <li class="nav-item customer" id="new_connection_nav">
+            <a class="nav-link" routerLink="/connections/new_connection">New Connection</a>
+          </li>
+          <li class="nav-item customer" id="my_bills_nav">
+            <a class="nav-link" routerLink="/my_bills">My Bills</a>
+          </li>
+          <li class="nav-item customer" id="my_connections_nav">
+            <a class="nav-link" routerLink="/my_connections">My Connections</a>
+          </li>
+          <li class="nav-item request_verifier" id="view_requested_connection_nav">
+            <a class="nav-link" routerLink="/connections/new_requests">view Requested Connections</a>
+          </li>
+          <li class="nav-item request_verifier" id="view_users_nav">
+            <a class="nav-link" routerLink="/users">Users</a>
+          </li>
+          <li class="nav-item onfield_team" id="onfield_requests_nav">
+            <a class="nav-link" routerLink="generate_bill">Generate bill</a>
+          </li>
+          <li class="nav-item onfield_team" id="onfield_requests_nav">
+            <a class="nav-link" routerLink="/connections/onfield_requests">onfield Requests</a>
+          </li>
+          <li class="nav-item onfield_team" id="running_connections_nav">
+            <a class="nav-link" routerLink="/connections/running_connections">running Connections</a>
+          </li>
+          <li class="nav-item onfield_team" id="pending_requests_nav">
+            <a class="nav-link" routerLink="/connections/pending_connections">Pending Connections</a>
+          </li>
+          <li class="nav-item onfield_team" id="view_users_nav">
+            <a class="nav-link" routerLink="/users">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/profile">Profile</a>
+          </li>
+          <li class="nav-item left">
+            <a class="nav-link" style="cursor:pointer" (click)="logout()">Logout</a>
+          </li>
+
+        </ul>
+        <!-- <ul class="navbar-nav ml-auto" id="customer_nav">
+
+        </ul>
+        <ul class="navbar-nav ml-auto" id="admin_nav">
+
+        </ul>
+        <ul class="navbar-nav ml-auto" id="request_verifier_nav">
+
+        </ul>
+        <ul class="navbar-nav ml-auto" id="onfield_team_nav">
+
+        </ul>
+        <ul class="navbar-nav ml-auto">
+
+        </ul> -->
+      <ul class="navbar-nav ml-auto" id="loggedOutNav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login">login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users/register">Register</a>
+        </li>
+      </ul>
+      <!--<ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Home</a>
+        </li>
+        <li class="nav-item" id="view_users_nav">
+          <a class="nav-link" routerLink="/users">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login">login</a>
+        </li>
+        <li class="nav-item" id="new_connection_nav">
+          <a class="nav-link" routerLink="/connections/new_connection">New Connection</a>
+        </li>
+        <li class="nav-item" id="view_requested_connection_nav">
+          <a class="nav-link" routerLink="/connections/new_requests">view Requested Connections</a>
+        </li>
+        <li class="nav-item" id="onfield_requests_nav">
+          <a class="nav-link" routerLink="/connections/onfield_requests">onfield Requests</a>
+        </li>
+        <li class="nav-item" id="pending_requests_nav">
+          <a class="nav-link" routerLink="/connections/pending_connections">Pending Connections</a>
+        </li>
+        <li class="nav-item" id="denied_connections_nav">
+          <a class="nav-link" routerLink="/connections/denied_connections">denied Connections</a>
+        </li>
+        <li class="nav-item" id="running_connections_nav">
+          <a class="nav-link" routerLink="/connections/running_connections">running Connections</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+
+      </ul>
+    -->
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+<!-- footer -->
+<footer class="page-footer pt-4 bg-dark text-center">
+  <p class="navbar-brand mt-5 mb-3 text-muted">Electrify</p>
+  <p class="text-muted">Contact Info.</p>
+  <p class="text-muted">vyompatel95745@gmail.com</p>
+  <p class="text-muted">harshsaparia007@gmail.com</p>
+  <p class="text-muted">anjushah2507@gmail.com</p>
+  <p class="text-muted">&copy; 2020-2021</p>
+</footer>

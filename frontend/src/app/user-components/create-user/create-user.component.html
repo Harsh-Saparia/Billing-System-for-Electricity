@@ -1,0 +1,65 @@
+<div class="ffff">
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-12">
+            <div class="card-body">
+              <div class="brand-wrapper">
+                <img src="assets/images/ElectrifyLOGO.png" alt="logo" class="logo">
+              </div>
+              <p class="login-card-description">Sign into your account</p>
+
+              <div class="form-group mb-4">
+                <label for="name" class="sr-only">Name</label>
+                <input [(ngModel)]="user.name" type="text" class="form-control" name="email" required
+                  placeholder="Name">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="email" class="sr-only">Email</label>
+                <input [(ngModel)]="user.email" type="email" class="form-control" name="email" required
+                  placeholder="Email address">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="mobile_no" class="sr-only">Mobile no</label>
+                <input [(ngModel)]="user.mobile_no" type="text" class="form-control" name="mobile_no" required
+                  placeholder="Mobile no">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="address" class="sr-only">Address</label>
+                <input [(ngModel)]="user.address" type="text" class="form-control" name="address" required
+                  placeholder="Address">
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" [(ngModel)]="user.password" class="form-control" name="password" required
+                  placeholder="Enter Password">
+              </div>
+
+              <div class="form-group">
+                <label for="confirm_password" class="sr-only">Confirm Password</label>
+                <input type="password" [(ngModel)]="confirm_password" class="form-control" name="confirm_password"
+                  required placeholder="Confirm Password">
+              </div>
+
+              <label class="login-card-error" id="message"></label>
+              <input name="register" id="register" class="btn btn-block login-btn mb-4" (click)="registerUser()"
+                type="submit" value="Register">
+
+              <p class="login-card-footer-text">Already registered? <a routerLink="/login"
+                  class="forgot-password-link">login</a></p>
+              <nav class="login-card-footer-nav">
+                <a href="#!">Terms of use.</a>
+                <a href="#!">Privacy policy</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

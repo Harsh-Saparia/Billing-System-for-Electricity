@@ -1,0 +1,31 @@
+<div id="resources" class="login-card">
+  <div class="py-5" *ngFor="let bill of bills">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">Date : {{bill.billing_date | date:'mediumDate'}}</h3>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Bill id : {{bill._id}}</label>
+            </div>
+            <div class="form-group">
+              <label>Connection id : {{bill.connection_id}}</label>
+            </div>
+            <div class="form-group">
+              <label>Amount : {{bill.total_bill}}</label>
+            </div>
+            <div class="form-group">
+              <label>Status : {{bill.status}}</label>
+            </div>
+
+            <hr>
+            <button type="button" class="btn btn-block login-btn mb-4" (click)="view_bill(bill._id)" routerLinkActive="router-link-active" >View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+

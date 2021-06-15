@@ -1,0 +1,92 @@
+<div class="ffff">
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container" *ngFor="let charge of charges">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-12">
+            <div class="card-header">
+              <h3 class="mb-0">{{charge.connection_type}}</h3>
+            </div>
+            <div class="card-body">
+              <!--<div class="form-group">
+                <label>Fixed charge : {{charge.fixed_charge}}</label>
+              </div>
+            -->
+              <div class="form-group">
+                <label>Fixed charge : </label>
+                <input type="number" [(ngModel)]="charge.fixed_charge" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Fuel Charge : </label>
+                <input type="number" [(ngModel)]="charge.fuel_charge" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Electricity Charge : </label>
+                <input type="number" [(ngModel)]="charge.electricity_charge" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Connection Charge : </label>
+                <input type="number" [(ngModel)]="charge.connection_charge" class="form-control" />
+              </div>
+              <button type="button" class="btn btn-block login-btn mb-4" (click)="updateCharges(charge)">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<div class="ffff">
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-12">
+            <div class="card-body">
+              <div class="brand-wrapper">
+                <img src="assets/images/ElectrifyLOGO.png" alt="logo" class="logo">
+              </div>
+              <p class="login-card-description">Add New Charges Category</p>
+
+              <div class="form-group mb-4">
+                <label for="connection_type" class="sr-only">Connection type</label>
+                <input [(ngModel)]="new_charges.connection_type" type="text" class="form-control" name="connection_type"
+                  required placeholder="Connection Type">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="fixed_charge" class="sr-only">Fixed Charge</label>
+                <input [(ngModel)]="new_charges.fixed_charge" type="number" class="form-control" name="fixed_charge"
+                  required placeholder="Fixed Charge">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="fuel_charge" class="sr-only">Fuel Charge</label>
+                <input [(ngModel)]="new_charges.fuel_charge" type="number" class="form-control" name="fuel_charge"
+                  required placeholder="Fuel Charge">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="electricity_charge" class="sr-only">Electricity charge</label>
+                <input [(ngModel)]="new_charges.electricity_charge" type="number" class="form-control"
+                  name="electricity_charge" required placeholder="Electricity charge">
+              </div>
+
+              <div class="form-group">
+                <label for="connection_charge" class="sr-only">Connection Charge</label>
+                <input type="number" [(ngModel)]="new_charges.connection_charge" class="form-control"
+                  name="connection_charge" required placeholder="Connection Charge">
+              </div>
+
+              <label class="login-card-error" id="message"></label>
+              <input name="register" id="register" class="btn btn-block login-btn mb-4" (click)="save_new_charges()"
+                type="submit" value="Register">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
